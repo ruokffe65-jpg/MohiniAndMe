@@ -1,0 +1,126 @@
+/* ===== Mohini ❤️ Phase 1 ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#050816;
+    color:#fff;
+    overflow:hidden;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+/* Animated Galaxy Background */
+
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.15) 1px,transparent 2px),
+    radial-gradient(circle at 80% 30%,rgba(255,255,255,.2) 1px,transparent 2px),
+    radial-gradient(circle at 40% 70%,rgba(255,255,255,.15) 1px,transparent 2px),
+    radial-gradient(circle at 60% 80%,rgba(255,255,255,.2) 1px,transparent 2px);
+    background-size:220px 220px;
+    animation:stars 60s linear infinite;
+    opacity:.9;
+}
+
+@keyframes stars{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-220px);
+    }
+}
+
+/* Main Card */
+
+.container{
+    width:90%;
+    max-width:700px;
+    padding:60px 40px;
+    text-align:center;
+
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:28px;
+
+    box-shadow:
+    0 0 50px rgba(255,105,180,.18);
+
+    z-index:2;
+}
+
+h1{
+    font-size:58px;
+    color:#FFD700;
+    margin-bottom:20px;
+    text-shadow:0 0 20px gold;
+}
+
+p{
+    font-size:22px;
+    line-height:1.8;
+    color:#ececec;
+    margin-bottom:40px;
+}
+
+#heartButton{
+
+    padding:18px 45px;
+
+    border:none;
+
+    border-radius:60px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:22px;
+
+    background:
+    linear-gradient(45deg,#ff4d8d,#ff80bf);
+
+    transition:.35s;
+}
+
+#heartButton:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+    0 0 35px #ff4d8d;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+h1{
+font-size:42px;
+}
+
+p{
+font-size:18px;
+}
+
+#heartButton{
+font-size:18px;
+padding:15px 30px;
+}
+
+}
