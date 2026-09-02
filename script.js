@@ -21,3 +21,25 @@ const button = document.getElementById("heartButton");
 button.addEventListener("click", () => {
     alert("❤️ Welcome to Our Universe, Mohini ❤️");
 });
+
+// ===== Floating Hearts =====
+
+function createHeart() {
+    const container = document.getElementById("hearts");
+
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+    heart.style.fontSize = (18 + Math.random() * 22) + "px";
+
+    container.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+setInterval(createHeart, 500);
