@@ -1,22 +1,23 @@
+const startDate = new Date("2026-06-01T17:36:00");
+
+function updateTimer() {
+    const now = new Date();
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("loveTimer").textContent =
+        `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+}
+
+updateTimer();
+setInterval(updateTimer, 1000);
+
 const button = document.getElementById("heartButton");
 
 button.addEventListener("click", () => {
-
-    document.body.style.transition = "1s";
-
-    document.body.style.background =
-    "linear-gradient(135deg,#0f172a,#4c1d95,#ec4899)";
-
-    button.innerHTML = "❤️ I Love You Betu ❤️";
-
-    alert(
-`Dear Mohini ❤️
-
-This is only the beginning...
-
-Your Kuchu Puchu has made something special just for you.
-
-Get ready for our love story... 💖`
-    );
-
+    alert("❤️ Welcome to Our Universe, Mohini ❤️");
 });
